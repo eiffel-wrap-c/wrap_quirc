@@ -16,7 +16,7 @@ Quirc is a C library for scanning QR codes.
 
 
 ### Windows
-Using vcpkg (https://github.com/microsoft/vcpkg) tool, you can install libgsl library
+Using vcpkg (https://github.com/microsoft/vcpkg) tool, you can install lib quirc library
 
 	vcpkg install quirc:x64-windows-static
 	
