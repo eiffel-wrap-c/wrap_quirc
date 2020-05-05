@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<ewg_config name="quirc">
+
+  <rule_list>
+  	  <!-- Ignore everything that starts with an underscore. -->
+    <rule>
+      <match>
+          <identifier name="_.*"/>  
+      </match>
+       <wrapper type="none">
+      </wrapper>
+    </rule>
+
+
+    	  <!-- Include functions, structs, unions, macros, etc-->
+    	  <!-- To learn more read: https://github.com/eiffel-wrap-c/WrapC/blob/master/doc/Readme.md#config_file-->
+
+     
+      
+      <rule>
+        <match>
+          <identifier name="quirc_version"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_new"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_destroy"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_resize"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_begin"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_end"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_strerror"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+      <rule>
+        <match>
+          <identifier name="quirc_count"/>
+        </match>
+        <wrapper type="default">
+        </wrapper>
+      </rule> 
+      
+    
+    
+      <!-- And the rest should be ignored -->
+    <rule>
+      <match>
+      </match>
+       <wrapper type="none">
+      </wrapper>
+    </rule>
+
+
+  </rule_list>
+
+</ewg_config>
