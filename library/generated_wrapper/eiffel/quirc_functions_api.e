@@ -24,36 +24,50 @@ feature -- Access
 				create Result.make_by_pointer ( l_ptr )
 			end
 
+		ensure
+			instance_free: class
 		end
 
 	quirc_destroy (q: QUIRC_STRUCT_API) 
 		do
 			c_quirc_destroy (q.item)
+		ensure
+			instance_free: class
 		end
 
 	quirc_resize (q: QUIRC_STRUCT_API; w: INTEGER; h: INTEGER): INTEGER 
 		do
 			Result := c_quirc_resize (q.item, w, h)
+		ensure
+			instance_free: class
 		end
 
 	quirc_begin (q: QUIRC_STRUCT_API; w: POINTER; h: POINTER): POINTER 
 		do
 			Result := c_quirc_begin (q.item, w, h)
+		ensure
+			instance_free: class
 		end
 
 	quirc_end (q: QUIRC_STRUCT_API) 
 		do
 			c_quirc_end (q.item)
+		ensure
+			instance_free: class
 		end
 
 	quirc_strerror (err: INTEGER): POINTER 
 		do
 			Result := c_quirc_strerror (err)
+		ensure
+			instance_free: class
 		end
 
 	quirc_count (q: QUIRC_STRUCT_API): INTEGER 
 		do
 			Result := c_quirc_count (q.item)
+		ensure
+			instance_free: class
 		end
 
 feature -- Externals

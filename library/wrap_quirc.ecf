@@ -29,6 +29,13 @@
 			</condition>		
 		</external_include>
 
+			<!-- Include headers for the C target library -->
+		<external_include location="/usr/local/include">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>		
+		</external_include>
+
 		
 	
 		
@@ -61,7 +68,7 @@
 
 
 		<!-- External C library -->
-		<external_object location="/usr/local/lib/quirc.so">
+		<external_object location="/usr/local/lib/libquirc.a">
 			<condition>
 				<platform excluded_value="windows"/>
 			</condition>

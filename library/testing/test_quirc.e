@@ -19,25 +19,17 @@ feature -- Test routines
 			-- New test routine
 
 		do
-			assert ("Version", not quirc.quirc_version.is_case_insensitive_equal ("Unkown"))
+			assert ("Version", not {QUIRC_FUNCTIONS}.quirc_version.is_case_insensitive_equal ("Unkown"))
 		end
 
 	test_quirc_initalization
 		do
-			if attached {QUIRC_STRUCT_API} quirc.quirc_new as l_quirc then
+			if attached {QUIRC_STRUCT_API} {QUIRC_FUNCTIONS}.quirc_new as l_quirc then
 				assert ("Expteted Attached", True)
-				quirc.quirc_destroy (l_quirc)
+				{QUIRC_FUNCTIONS}.quirc_destroy (l_quirc)
 			else
 				assert ("Unexpected", False)
 			end
-		end
-
-
-feature {NONE} -- Implemantation
-
-	quirc: QUIRC_FUNCTIONS
-		once
-			create Result
 		end
 end
 
