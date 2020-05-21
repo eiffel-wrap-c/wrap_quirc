@@ -2,11 +2,13 @@
 `wrap_quirc` is an Eiffel binding of [quirc C API](https://github.com/dlbeer/quirc) 
 using [WrapC](https://github.com/eiffel-wrap-c/WrapC) tool.
 
-## Requirements 
+Quirc QR decoder library. 
 
+## Requirements 
 
 *  [WrapC](https://github.com/eiffel-wrap-c/WrapC) tool.
 *  [quirc C API](https://github.com/dlbeer/quirc).
+
 Quirc is a C library for scanning QR codes.
 
 ## Download and  Install
@@ -39,11 +41,11 @@ Work in progress
 
 Before to use the examples you will need to compile the C glue code, go to 
 
-	`library/generated_wrapper/c/src` 
+	library/generated_wrapper/c/src 
 
 and run
 
-	`finish_freezing --library`
+	finish_freezing --library
 
 It will copy the C lib `eif_libquirc.a` or `eif_libquirc.lib` under the library root `$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/`
 

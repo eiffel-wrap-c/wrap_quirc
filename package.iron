@@ -1,0 +1,19 @@
+package wrap_quirc
+
+project
+	wrap_quirc = "library/wrap_quirc.ecf"
+
+note
+	title: Eiffel wrap_quirc
+	description: "[
+	wrap_quirc is an Eiffel binding of quirc C API using WrapC tool.
+	Quirc is a C library for scanning QR codes.
+	]"
+
+	tags: quirc, qrdecoder, library , wrapc 
+	license: EFL
+	copyright: Copyright (c)  2020 Javier Velilla, Eiffel Software and others.
+	link[license]: "license" "https://github.com/eiffel-wrap-c/wrap_quirc/blob/master/license.lic"
+	link[github]: "project" https://github.com/eiffel-wrap-c/wrap_quirc
+
+end
